@@ -3,7 +3,7 @@
 ## **Problem Statement**
 The problem involves using directional aids to detect defective and non defective packages. 
 
-![Arena](https://github.com/ashiqrahmana/WidgetMover-Autonomous-Guided-Vehicle-for-Efficient-Factory-Operations/blob/main/Arena.jpg)
+![Arena](https://github.com/ashiqrahmana/AutoInventoryBot-Autonomous-Robot-for-Warehouse-Inventory-Monitoring-and-Management/blob/main/Images/arena.jpeg)
 
 ### **Scenario**
 The robot starts at the home location S. 
@@ -27,7 +27,9 @@ This procedure is repeated until the no mans zone is reached where using the dir
 Parallax Continious Servo, Parallax Positional Servo
 
 **Circuit Diagram**
-![Circuit](https://github.com/ashiqrahmana/WidgetMover-Autonomous-Guided-Vehicle-for-Efficient-Factory-Operations/blob/main/Circuit.png)
+![Circuit](https://github.com/ashiqrahmana/AutoInventoryBot-Autonomous-Robot-for-Warehouse-Inventory-Monitoring-and-Management/blob/main/Images/circuit.jpeg)
+![Servo Circuit](https://github.com/ashiqrahmana/AutoInventoryBot-Autonomous-Robot-for-Warehouse-Inventory-Monitoring-and-Management/blob/main/Images/servo.jpeg)
+
 
 ## **Approach**
 Since the problem involves navigating from one node to another, the A* algorithm is employed. This approach helps avoid any hardcoded navigation as the algorithm will automatically generate the next set of nodes that has to be traversed to reach the final node. 
