@@ -6,12 +6,7 @@ The problem involves using directional aids to detect defective and non defectiv
 ![Arena](https://github.com/ashiqrahmana/AutoInventoryBot-Autonomous-Robot-for-Warehouse-Inventory-Monitoring-and-Management/blob/main/Images/arena.jpeg)
 
 ### **Scenario**
-The robot starts at the home location S. 
-At every odd intersectiosn there will ber an directional aid in the forma  blue triangle. 
-Using the aid to decide to move left or rigth at first and take the direction.
-Proceedign to A or B lane the bot shoudl stop at the station A and B which contain aruco tags.
-The detective and non defective pacakges for identified and noted.
-This procedure is repeated until the no mans zone is reached where using the directional amrkers the bot is turned atill the markers are detected and bot proceeded to station as shown in thr arena.
+The robot starts at the home location S. At every odd intersection, there will be a directional aid in the form of a blue triangle. Using the aid, the robot decides to move left or right initially and takes that direction. Proceeding to lanes A or B, the bot should stop at stations A and B, which contain ArUco tags. The defective and non-defective packages are identified and noted. This procedure is repeated until the no man's zone is reached, where the bot is turned using the directional markers until the markers are detected, and then the bot proceeds to the station as shown in the arena.
 
 ## **Hardware**
 
@@ -21,7 +16,7 @@ This procedure is repeated until the no mans zone is reached where using the dir
 | Sensor | Model | Use |
 |--------|-----|----|
 | IR Sensor | QTI | For Line following |
-| Camera | Pi-Camera | For Directiional Aids and packages |
+| Camera | Pi-Camera | For Directional Aids and packages |
 
 **Actuator**
 Parallax Continious Servo, Parallax Positional Servo
@@ -31,9 +26,17 @@ Parallax Continious Servo, Parallax Positional Servo
 ![Servo Circuit](https://github.com/ashiqrahmana/AutoInventoryBot-Autonomous-Robot-for-Warehouse-Inventory-Monitoring-and-Management/blob/main/Images/servo.jpeg)
 
 
-## **Approach**
-Since the problem involves navigating from one node to another, the A* algorithm is employed. This approach helps avoid any hardcoded navigation as the algorithm will automatically generate the next set of nodes that has to be traversed to reach the final node. 
+## **Uniqueness**
+Using Visual Servoing for the Auto Inventory Bot
 
-At every node, A* path planner is invoked and the map is updated based on the ultrasonic sensor reading to block off unaccessable nodes. This forces the algorithm to generate alternative path that will get it to the destination. The child nodes are generated based on the accessible nodes from the given node to make sure that the lane constraints are met. 
+Visual servoing is a technique that utilizes visual feedback from a camera to control the motion of a robot. In the context of the Auto Inventory Bot, visual servoing can be employed to enhance the robot's ability to navigate and interact with the environment more accurately.
 
-Once the nodes are generated, we then generate the drive command by comparing the current and the next nodes and update the current node. If the command is a turn, we update both current node and orientation of the robot. This way, we can keep track of vertical lanes and accomodate the lane conditions.
+The following steps outline the process of using visual servoing for the Auto Inventory Bot:
+
+Object Detection: Utilize computer vision techniques to detect and locate the objects of interest (e.g., packages, directional aids, ArUco tags) within the camera's field of view. This can involve techniques like image segmentation, feature extraction, and object recognition.
+
+Visual Servoing Control: Implement a control algorithm that uses the visual feedback to compute the robot's motion commands. This control algorithm typically minimizes the error between the current visual features (object pose) and the desired features (from the desired trajectory).
+
+Feedback Loop: Continuously update the visual feedback, recalculate the error, and adjust the robot's motion accordingly. This feedback loop ensures that the robot can adapt to changes in the environment and maintain accurate control.
+
+By incorporating visual servoing into the Auto Inventory Bot's control system, the robot can enhance its perception capabilities and make more precise and adaptive movements. This can lead to improved navigation, object manipulation, and inventory management within the warehouse environment.
