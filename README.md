@@ -33,10 +33,13 @@ Visual servoing is a technique that utilizes visual feedback from a camera to co
 
 The following steps outline the process of using visual servoing for the Auto Inventory Bot:
 
-Object Detection: Utilize computer vision techniques to detect and locate the objects of interest (e.g., packages, directional aids, ArUco tags) within the camera's field of view. This can involve techniques like image segmentation, feature extraction, and object recognition.
+### Object Detection 
+Utilize computer vision techniques to detect and locate the objects of interest (e.g., packages, directional aids, ArUco tags) within the camera's field of view. This can involve techniques like image segmentation, feature extraction, and object recognition.
 
-Visual Servoing Control: Implement a control algorithm that uses the visual feedback to compute the robot's motion commands. This control algorithm typically minimizes the error between the current visual features (object pose) and the desired features (from the desired trajectory).
+### Visual Servoing Control
+Implement a control algorithm that uses the visual feedback to compute the robot's motion commands. This control algorithm typically minimizes the error between the current visual features (object pose) and the desired features (from the desired trajectory).
 
-Feedback Loop: Continuously update the visual feedback, recalculate the error, and adjust the robot's motion accordingly. This feedback loop ensures that the robot can adapt to changes in the environment and maintain accurate control.
+### Feedback Loop: 
+Continuously update the visual feedback, recalculate the error, and adjust the robot's motion accordingly. This feedback loop ensures that the robot can adapt to changes in the environment and maintain accurate control.
 
 By incorporating visual servoing into the Auto Inventory Bot's control system, the robot can enhance its perception capabilities and make more precise and adaptive movements. This can lead to improved navigation, object manipulation, and inventory management within the warehouse environment.
